@@ -21,3 +21,5 @@ def moedacotacaoBRL(moeda):
 
     print (f"Cotação:  {cotacao:.2f}")
     print(f"Valor convertido: R${resultado:.2f}")
+
+    
