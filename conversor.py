@@ -15,9 +15,9 @@ def moedacotacaoBRL(moeda):
 
     cotacao = obter_cotacao(moeda)
 
-    valor = float(input("Digite o valor em reais para converter: "))
+    valor = float(input("Digite o valor para converter: "))
 
-    resultado = cotacao / valor
+    resultado = valor * cotacao
 
     print (f"Cotação:  {cotacao:.2f}")
     print(f"Valor convertido: R${resultado:.2f}")
