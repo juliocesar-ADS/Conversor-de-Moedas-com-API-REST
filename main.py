@@ -48,6 +48,14 @@ def conversorbrasileiro():
 # Convertendo moeda Brasileira em moedas Estrangeiras
 
 def conversorestrangeiro():
+
+    moedas = {
+            1: "USD-BRL",
+            2: "EUR-BRL",
+            3: "JPY-BRL",
+            4: "GBP-BRL"
+        }
+    
     while True:
         print("=================================================")
         print("              CONVERSOR DE MOEDAS                ")
@@ -55,7 +63,9 @@ def conversorestrangeiro():
         print(" 1 - Dólar")
         print(" 2 - Euro")
         print(" 3 - Iene")
-        print(" 4 -Voltar\n")
+        print(" 4 - Libra")
+        print(" 5 - Sair\n")
+
 
         try:
             opcao = int(input("Digite um numero: "))
@@ -63,23 +73,16 @@ def conversorestrangeiro():
             print("Digite um valor valido")
             continue
         
-
-        if opcao == 1:
-            moedacotacao("USD-BRL")
-            time.sleep(2)
-
-        elif opcao == 2:
-            moedacotacao("EUR-BRL")
-            time.sleep(2)
-
-        elif opcao == 3:
-            moedacotacao("JPY-BRL")
-            time.sleep(2)
-
-        elif opcao == 4:
+        if opcao == 5:
             print("Voltando...")
-            time.sleep(2)
+            time.sleep(1)
             break
+
+
+        if opcao in moedas:
+            moeda = moedas[opcao]
+            moedacotacao(moeda)
+            time.sleep(2)
 
         else:
             print("opção inválida!")
