@@ -1,57 +1,40 @@
 # 💱 Conversor de Moedas com API REST
 
-Projeto desenvolvido em **Python** com o objetivo de praticar o consumo de **API REST**, manipulação de **JSON**, requisições HTTP e organização de código em módulos.
+Projeto desenvolvido em **Python** para praticar o consumo de **API REST**, requisições HTTP, JSON, dicionários, tratamento de erros e organização de código.
 
-O sistema consulta cotações de moedas em tempo real através da **AwesomeAPI** e realiza conversões entre moedas.
+O programa consulta cotações através da **AwesomeAPI** e realiza conversões de moedas pelo terminal.
 
-> 🚧 **Projeto em desenvolvimento**
->
-> Novas funcionalidades serão adicionadas durante o desenvolvimento do projeto.
+> 🚧 Projeto em desenvolvimento.
 
 ---
 
-## 📌 Sobre o Projeto
+## 🛠️ Tecnologias
 
-O Conversor de Moedas permite consultar cotações através de uma API REST e realizar conversões utilizando os valores retornados pela API.
-
-O projeto foi desenvolvido como parte dos meus estudos de **Python e desenvolvimento de APIs**, buscando compreender na prática como uma aplicação se comunica com serviços externos.
-
-### Atualmente o projeto possui:
-
-* Consulta de cotação através de API REST
-* Conversão de moedas
-* Menu interativo no terminal
-* Conversão entre Real, Dólar, Euro e Iene
-* Separação do projeto em módulos
-* Tratamento básico de entradas inválidas
-* Requisições HTTP utilizando `Requests`
-* Manipulação de dados em formato JSON
+- Python
+- Requests
+- API REST
+- JSON
+- Git
+- GitHub
 
 ---
 
-## 🛠️ Tecnologias utilizadas
+## 📌 Funcionalidades
 
-* **Python**
-* **Requests**
-* **API REST**
-* **JSON**
-* **Git**
-* **GitHub**
-
----
-
-## 🌐 API utilizada
-
-O projeto utiliza a **AwesomeAPI** para consultar as cotações das moedas.
-
-A aplicação realiza requisições HTTP para obter os valores atualizados das moedas e utiliza os dados retornados pela API para realizar os cálculos.
+- Consulta de cotações através de API REST
+- Conversão entre Real, Dólar, Euro e Iene
+- Menu interativo no terminal
+- Utilização de dicionários
+- Validação dos valores informados
+- Tratamento de erros da API
+- Organização do código em módulos
 
 ---
 
-## 📂 Estrutura do projeto
+## 📂 Estrutura
 
 ```text
-conversor-moedas/
+Conversor-de-Moedas-com-API-REST/
 │
 ├── main.py
 ├── conversor.py
@@ -59,141 +42,58 @@ conversor-moedas/
 ├── requirements.txt
 ├── .gitignore
 └── README.md
-```
+Arquivos
 
-### `main.py`
+main.py
+Controla os menus e a interação com o usuário.
 
-Responsável pelo menu principal e pela interação com o usuário.
+conversor.py
+Responsável pelos cálculos e validação dos valores.
 
-### `conversor.py`
+api.py
+Responsável pela comunicação com a API e obtenção das cotações.
 
-Responsável pela lógica de conversão das moedas.
+🌐 API utilizada
 
-### `api.py`
+O projeto utiliza a AwesomeAPI para obter as cotações.
 
-Responsável pela comunicação com a API externa e obtenção das cotações.
+Exemplo:
 
----
+GET /json/last/USD-BRL
 
-## ⚙️ Como executar o projeto
+A resposta da API é recebida em JSON e convertida para um dicionário Python.
 
-### 1. Clone o repositório
+▶️ Como executar
 
-```bash
-git clone URL_DO_SEU_REPOSITORIO
-```
+Clone o repositório:
 
-### 2. Entre na pasta
+git clone https://github.com/juliocesar-ADS/Conversor-de-Moedas-com-API-REST.git
 
-```bash
-cd conversor-moedas
-```
+Entre na pasta:
 
-### 3. Instale as dependências
+cd Conversor-de-Moedas-com-API-REST
 
-```bash
+Instale as dependências:
+
 pip install -r requirements.txt
-```
 
-### 4. Execute o projeto
+Execute:
 
-```bash
 python main.py
-```
-
----
-
-## 💻 Exemplo de utilização
-
-Ao executar o programa, será apresentado um menu semelhante a:
-
-```text
-=================================================
-              CONVERSOR DE MOEDAS
-=================================================
-
-1 - Dólar
-2 - Euro
-3 - Iene
-4 - Sair
-```
-
-O usuário escolhe a moeda desejada e informa o valor que deseja converter.
-
-O sistema consulta a cotação através da API e apresenta o resultado no terminal.
-
----
-
-## 📚 Conceitos praticados
-
-Durante o desenvolvimento deste projeto estou praticando:
-
-* Variáveis
-* Tipos de dados
-* Condicionais
-* Loops
-* Funções
-* `return`
-* Imports e módulos
-* Dicionários
-* Tratamento de exceções
-* Requisições HTTP
-* Métodos HTTP
-* APIs REST
-* JSON
-* Manipulação de respostas de APIs
-* Organização de projetos Python
-* Git e GitHub
-
----
-
-## 🚀 Próximas funcionalidades
-
-O projeto continuará sendo desenvolvido.
-
-### Planejado:
-
-* [ ] Adicionar mais moedas
-* [ ] Utilizar dicionários para eliminar repetição de código
-* [ ] Melhorar o tratamento de erros da API
-* [ ] Validar valores informados pelo usuário
-* [ ] Permitir conversões entre diferentes moedas
-* [ ] Criar histórico de conversões
-* [ ] Melhorar a interface do terminal
-* [ ] Aplicar Programação Orientada a Objetos
-* [ ] Criar testes automatizados
-* [ ] Criar uma API REST própria utilizando Flask
-* [ ] Documentar os endpoints da API
-* [ ] Melhorar o projeto para utilização no portfólio
-
----
-
-## 🎯 Objetivo
-
-O principal objetivo deste projeto é desenvolver conhecimento prático em **Python, APIs REST e desenvolvimento de software**, evoluindo gradualmente de um projeto simples de terminal para uma aplicação mais completa e estruturada.
-
----
-
-## 👨‍💻 Autor
-
-**Júlio César**
-
-Estudante de Análise e Desenvolvimento de Sistemas.
-
-Interesses:
-
-* Python
-* APIs REST
-* Backend
-* Flask
-* MySQL
-* Git e GitHub
-* Desenvolvimento de Software
-
----
-
-## 📈 Status do projeto
-
-🚧 **Em desenvolvimento**
-
-Este projeto está sendo desenvolvido continuamente como parte da minha jornada de aprendizado em desenvolvimento backend.
+📚 O que estou praticando
+Python
+Funções
+Dicionários
+Loops e condicionais
+Tratamento de exceções
+Requisições HTTP
+API REST
+JSON
+Git e GitHub
+🚀 Próximos passos
+ Adicionar mais moedas
+ Melhorar o tratamento de erros
+ Criar histórico de conversões
+ Aplicar POO
+ Criar testes
+ Criar uma API REST própria com Flask
