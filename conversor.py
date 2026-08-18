@@ -1,5 +1,7 @@
 from api import obter_cotacao
 
+
+#soluções de erros
 def obter_valor():
     while True:
         try:
@@ -14,6 +16,7 @@ def obter_valor():
             print("Somente Números são válidos.")
 
 
+#converter moeda brasileira em estrangeiras
 def moedacotacao(moeda):
 
     cotacao = obter_cotacao(moeda)
@@ -29,7 +32,7 @@ def moedacotacao(moeda):
     print (f"Cotação: R$ {cotacao:.2f}")
     print(f"Valor convertido: {resultado:.2f}")
 
-
+#converter moedas estrangeiras em brasileira
 def moedacotacaoBRL(moeda):
 
     cotacao = obter_cotacao(moeda)
@@ -39,7 +42,7 @@ def moedacotacaoBRL(moeda):
         return
     
     valor = obter_valor()
-    
+
     resultado = valor * cotacao
 
     print (f"Cotação:  {cotacao:.2f}")

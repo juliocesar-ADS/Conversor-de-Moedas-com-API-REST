@@ -16,6 +16,10 @@ def obter_cotacao(moeda):
 
         return float(dados[moeda_api]["bid"])
     
-    except requests.exceptions.RequestException:
-        print("Erro ao consultar a API.")
+    except requests.exceptions.RequestException as erro:
+        print(f"Teve um erro em: {erro}")
+        return None
+
+    except KeyError as erro:
+        print(f"Erro encontrado: {erro}")
         return None
