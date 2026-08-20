@@ -1,5 +1,6 @@
 import requests
 
+#api para puxar os dados da web
 
 def obter_cotacao(moeda):
         
