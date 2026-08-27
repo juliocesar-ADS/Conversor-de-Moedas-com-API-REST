@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Moedas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Conversor de Moedas</h1>
+    <form action="/" method="POST">
+        <label for="valor">Valor</label>
+
+        <input 
+        type="number"
+        id="valor"
+        name="valor"
+        placeholder="Digite o valor"
+        >
+
+        <label for="moeda">Moeda</label>
+
+        <select name="moeda" id="moeda">
+            <option value="USD-BRL">Dólar</option>
+            <option value="EUR-BRL">Euro</option>
+            <option value="JPY-BRL">Iene</option>
+        </select>
+
+        <button type="submit">
+            Converter
+        </button>
+
+        {% if resultado is not none %}
+            <p>Cotação: R$ {{ "%.2f"|format(cotacao) }}</p>
+
+            <p>Resultado: {{ simbolo }} {{ "%.2f"|format(resultado) }}</p>
+        {% endif %}
+        {% if erro %}
+            <p>{{ erro }}</p>
+        {% endif %}
+    </form>
+</body>
+</html>

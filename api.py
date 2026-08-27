@@ -7,7 +7,7 @@ def obter_cotacao(moeda):
     try:
         url = f"https://economia.awesomeapi.com.br/json/last/{moeda}"
 
-        resposta = requests.get(url)
+        resposta = requests.get(url, timeout=5)
 
         resposta.raise_for_status()
 

@@ -1,68 +1,41 @@
-# 💱 Conversor de Moedas com API REST
+Conversor de Moedas com API REST
 
-Projeto desenvolvido em **Python** para praticar o consumo de **API REST**, requisições HTTP, JSON, dicionários, tratamento de erros e organização de código.
+Projeto desenvolvido em Python para praticar o consumo de API REST, requisições HTTP, JSON, tratamento de erros e organização de código.
 
-O programa consulta cotações através da **AwesomeAPI** e realiza conversões de moedas pelo terminal.
+O projeto consulta cotações através da AwesomeAPI e realiza conversões entre Real, Dólar, Euro e Iene.
 
-> 🚧 Projeto em desenvolvimento.
+🚧 Projeto em desenvolvimento.
 
----
-
-## 🛠️ Tecnologias
-
-- Python
-- Requests
-- API REST
-- JSON
-- Git
-- GitHub
-
----
-
-## 📌 Funcionalidades
-
-- Consulta de cotações através de API REST
-- Conversão entre Real, Dólar, Euro e Iene
-- Menu interativo no terminal
-- Utilização de dicionários
-- Validação dos valores informados
-- Tratamento de erros da API
-- Organização do código em módulos
-
----
-
-## 📂 Estrutura
-
-```text
+🛠️ Tecnologias
+Python
+Flask
+Requests
+HTML
+CSS
+API REST
+JSON
+Git e GitHub
+📌 Funcionalidades
+Consulta de cotações através de API REST
+Conversão entre Real, Dólar, Euro e Iene
+Interface web utilizando Flask
+Formulário para informar valor e moeda
+Utilização de dicionários para os símbolos das moedas
+Validação de valores inválidos
+Tratamento de erros da API
+Organização do código em módulos
+📂 Estrutura
 Conversor-de-Moedas-com-API-REST/
 │
-├── main.py
-├── conversor.py
+├── app.py
 ├── api.py
+├── templates/
+│   ── index.html
+├── static/
+│   ── style.css
 ├── requirements.txt
 ├── .gitignore
 └── README.md
-Arquivos
-
-main.py
-Controla os menus e a interação com o usuário.
-
-conversor.py
-Responsável pelos cálculos e validação dos valores.
-
-api.py
-Responsável pela comunicação com a API e obtenção das cotações.
-
-🌐 API utilizada
-
-O projeto utiliza a AwesomeAPI para obter as cotações.
-
-Exemplo:
-
-GET /json/last/USD-BRL
-
-A resposta da API é recebida em JSON e convertida para um dicionário Python.
-
 ▶️ Como executar
 
 Clone o repositório:
@@ -79,21 +52,27 @@ pip install -r requirements.txt
 
 Execute:
 
-python main.py
-📚 O que estou praticando
-Python
-Funções
+python app.py
+📚 Conceitos praticados
+Funções e módulos
 Dicionários
-Loops e condicionais
+Condicionais e loops
 Tratamento de exceções
 Requisições HTTP
-API REST
+APIs REST
 JSON
+Flask
+Formulários HTML
 Git e GitHub
 🚀 Próximos passos
- Adicionar mais moedas
- Melhorar o tratamento de erros
- Criar histórico de conversões
- Aplicar POO
- Criar testes
- Criar uma API REST própria com Flask
+Adicionar mais moedas
+Melhorar o visual da interface
+Criar histórico de conversões
+Aplicar POO
+Criar testes
+Evoluir o projeto para uma aplicação de portfólio
+
+
+Júlio César
+
+Estudante de Análise e Desenvolvimento de Sistemas, interessado em desenvolvimento Backend, Python e APIs REST.
