@@ -40,7 +40,7 @@ def inicio():
                     simbolo = moedas[moeda]
 
         except ValueError:
-            erro = "Digite um valor Válido."
+            erro = "Digite um valor válido."
 
 
     return render_template("index.html", cotacao=cotacao, resultado=resultado, simbolo=simbolo, erro=erro)
