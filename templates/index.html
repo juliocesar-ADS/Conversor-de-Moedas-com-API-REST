@@ -25,28 +25,39 @@
           placeholder="Digite o valor"
         />
 
-        <label for="moeda">Moeda</label>
+        <label for="de">De</label>
 
-        <select name="moeda" id="moeda">
-          <option value="USD-BRL">Dólar</option>
-          <option value="EUR-BRL">Euro</option>
-          <option value="JPY-BRL">Iene</option>
+        
+        <select name="de" id="de">
+          <option value="BRL">Real</option>
+          <option value="USD">Dólar</option>
+          <option value="EUR">Euro</option>
+          <option value="JPY">Iene</option>
+        </select>
+        
+        <label for="para">Para</label>
+        
+        <select name="para" id="para">
+          <option value="BRL">Real</option>
+          <option value="USD">Dólar</option>
+          <option value="EUR">Euro</option>
+          <option value="JPY">Iene</option>
         </select>
 
         <button type="submit">Converter</button>
         <div class="resultado">
           {% if resultado is not none %}
-          <p>Cotação: R$ {{ "%.2f"|format(cotacao) }}</p>
+          <p>Cotação: {{ simbolo_de }} 1  = {{ simbolo }} {{ "%.2f"|format(cotacao) }}</p>
 
           <p>Resultado: {{ simbolo }} {{ "%.2f"|format(resultado) }}</p>
           {% endif %}
         </div>
 
-        <div class="erro">
-          {% if erro %}
-          <p>{{ erro }}</p>
-          {% endif %}
-        </div>
+        {% if erro %}
+          <div class="erro">
+            <p>{{ erro }}</p>
+          </div>
+        {% endif %}
       </form>
     </div>
   </body>

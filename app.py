@@ -3,9 +3,10 @@ from api import obter_cotacao
 
 #para conseguir os simbolos das moedas eu pesquisei os simbolos na internet
 moedas = {
-    "USD-BRL": "US$",
-    "EUR-BRL": "€",
-    "JPY-BRL": "¥"}
+    "USD": "US$",
+    "EUR": "€",
+    "JPY": "¥",
+    "BRL": "R$"}
 
 app = Flask(__name__)
 
@@ -16,6 +17,7 @@ def inicio():
     resultado = None
     simbolo = None
     erro = None
+    simbolo_de = None
 
     if request.method == "POST":
 
@@ -26,24 +28,31 @@ def inicio():
                 erro = "Digite um valor positivo para o calculo."
             
             else:    
-                moeda = request.form["moeda"]
+                de = request.form["de"]
+                para = request.form["para"]
 
-                cotacao = obter_cotacao(moeda)
+                simbolo_de = moedas[de]
+                simbolo = moedas[para]
 
-                if cotacao is None:
-                    erro = "Não foi possível obter a cotação no momento. Tente novamente mais tarde."
+                if de == para:
+                    resultado = valor
+                    cotacao = 1
 
                 else:
+                    cotacao = obter_cotacao(de + "-" + para)
 
-                    resultado = valor / cotacao
+                    if cotacao is None:
+                        erro = "Não foi possível obter a cotação no momento. Tente novamente mais tarde."
 
-                    simbolo = moedas[moeda]
+                    else:
+
+                        resultado = valor * cotacao
 
         except ValueError:
             erro = "Digite um valor válido."
 
 
-    return render_template("index.html", cotacao=cotacao, resultado=resultado, simbolo=simbolo, erro=erro)
+    return render_template("index.html", cotacao=cotacao, resultado=resultado, simbolo=simbolo, erro=erro, simbolo_de=simbolo_de)
 
 if __name__ == "__main__":
     app.run(debug=True)

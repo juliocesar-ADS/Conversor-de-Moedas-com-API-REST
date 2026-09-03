@@ -24,3 +24,7 @@ def obter_cotacao(moeda):
     except KeyError as erro:
         print(f"Erro encontrado: {erro}")
         return None
+
+    except ValueError:
+        print("Valor recebido não pode ser convertido para número.")
+        return None
