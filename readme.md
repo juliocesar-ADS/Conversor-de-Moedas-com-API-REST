@@ -1,78 +1,93 @@
-# 💱 Conversor de Moedas com API REST
+💱 Conversor de Moedas com API REST
 
-Projeto desenvolvido em **Python** para praticar consumo de **API REST**, requisições HTTP, JSON, dicionários, tratamento de erros e organização de código.
+Projeto desenvolvido em Python para praticar consumo de API REST, requisições HTTP, JSON, dicionários, tratamento de erros e organização de código.
 
-A aplicação consulta cotações através da **AwesomeAPI** e realiza conversões de moedas.
+O programa consulta cotações através da AwesomeAPI e realiza conversões entre moedas.
 
-## 🛠️ Tecnologias
+🚧 Projeto em desenvolvimento.
 
-* Python
-* Flask
-* Requests
-* HTML
-* CSS
-* API REST
-* JSON
-* Git e GitHub
-
-## 📌 Funcionalidades
-
-* Consulta de cotações através de API REST
-* Conversão de Real para Dólar, Euro e Iene
-* Interface web com Flask
-* Validação dos valores informados
-* Tratamento de erros
-* Utilização de dicionários
-* Organização do projeto em módulos
-
-## 📂 Estrutura
-
-```text
+🛠️ Tecnologias
+Python
+Flask
+Requests
+API REST
+JSON
+HTML
+CSS
+Git e GitHub
+📌 Funcionalidades
+Consulta de cotações através de API REST
+Conversão entre Real, Dólar, Euro e Iene
+Conversão entre diferentes moedas
+Interface web com Flask
+Utilização de dicionários
+Validação dos valores informados
+Tratamento de erros de entrada e da API
+Timeout nas requisições
+Organização do código em módulos
+📂 Estrutura
 Conversor-de-Moedas-com-API-REST/
 │
 ├── app.py
-├── main.py
-├── conversor.py
 ├── api.py
+├── conversor.py
+├── main.py
 ├── templates/
-│   └── index.html
 ├── static/
-│   └── style.css
 ├── requirements.txt
 ├── .gitignore
 └── README.md
-```
+Arquivos
 
-## 🌐 API
+app.py
+Controla a aplicação Flask, formulário, conversões e mensagens de erro.
 
-O projeto utiliza a **AwesomeAPI** para obter as cotações.
+api.py
+Responsável pela comunicação com a API e obtenção das cotações.
 
-A resposta da API é recebida em JSON e convertida para um dicionário Python para que os dados possam ser utilizados no programa.
+conversor.py
+Responsável pelos cálculos e validação dos valores.
 
-## ▶️ Como executar
+main.py
+Versão inicial do conversor executada pelo terminal.
 
-```bash
+🌐 API utilizada
+
+O projeto utiliza a AwesomeAPI para obter as cotações.
+
+Exemplo:
+
+GET /json/last/USD-BRL
+
+A resposta é recebida em JSON e os dados são utilizados pelo programa.
+
+As requisições possuem timeout de 5 segundos e o projeto trata erros de conexão, respostas HTTP, dados inesperados e valores que não podem ser convertidos.
+
+▶️ Como executar
+
+Clone o repositório:
+
 git clone https://github.com/juliocesar-ADS/Conversor-de-Moedas-com-API-REST.git
+
+Entre na pasta:
 
 cd Conversor-de-Moedas-com-API-REST
 
+Instale as dependências:
+
 pip install -r requirements.txt
 
+Execute:
+
 python app.py
-```
-
-Depois, acesse o endereço exibido pelo Flask no terminal.
-
-## 📚 O que estou praticando
-
-* Python
-* Funções e módulos
-* Dicionários
-* Tratamento de exceções
-* Requisições HTTP
-* API REST
-* JSON
-* Flask
-* HTML e CSS
-* Git e GitHub
-
+📚 O que estou praticando
+Python
+Funções
+Dicionários
+Flask
+HTML e CSS
+Tratamento de exceções
+Requisições HTTP
+API REST
+JSON
+Git e GitHub
