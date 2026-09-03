@@ -1,10 +1,8 @@
 # 💱 Conversor de Moedas com API REST
 
-Projeto desenvolvido em Python para praticar o consumo de API REST, requisições HTTP, JSON, tratamento de erros e organização de código.
+Projeto desenvolvido em **Python** para praticar consumo de **API REST**, requisições HTTP, JSON, dicionários, tratamento de erros e organização de código.
 
-O projeto consulta cotações através da AwesomeAPI e realiza conversões entre Real, Dólar, Euro e Iene.
-
-> 🚧 Projeto em desenvolvimento.
+A aplicação consulta cotações através da **AwesomeAPI** e realiza conversões de moedas.
 
 ## 🛠️ Tecnologias
 
@@ -20,13 +18,12 @@ O projeto consulta cotações através da AwesomeAPI e realiza conversões entre
 ## 📌 Funcionalidades
 
 * Consulta de cotações através de API REST
-* Conversão entre Real, Dólar, Euro e Iene
-* Interface web utilizando Flask
-* Formulário para informar valor e moeda
-* Utilização de dicionários para os símbolos das moedas
-* Validação de valores inválidos
-* Tratamento de erros da API
-* Organização do código em módulos
+* Conversão de Real para Dólar, Euro e Iene
+* Interface web com Flask
+* Validação dos valores informados
+* Tratamento de erros
+* Utilização de dicionários
+* Organização do projeto em módulos
 
 ## 📂 Estrutura
 
@@ -34,65 +31,48 @@ O projeto consulta cotações através da AwesomeAPI e realiza conversões entre
 Conversor-de-Moedas-com-API-REST/
 │
 ├── app.py
+├── main.py
+├── conversor.py
 ├── api.py
 ├── templates/
-│   ── index.html
+│   └── index.html
 ├── static/
-│   ── style.css
+│   └── style.css
 ├── requirements.txt
 ├── .gitignore
 └── README.md
 ```
 
-## ▶️ Como executar
+## 🌐 API
 
-Clone o repositório:
+O projeto utiliza a **AwesomeAPI** para obter as cotações.
+
+A resposta da API é recebida em JSON e convertida para um dicionário Python para que os dados possam ser utilizados no programa.
+
+## ▶️ Como executar
 
 ```bash
 git clone https://github.com/juliocesar-ADS/Conversor-de-Moedas-com-API-REST.git
-```
 
-Entre na pasta:
-
-```bash
 cd Conversor-de-Moedas-com-API-REST
-```
 
-Instale as dependências:
-
-```bash
 pip install -r requirements.txt
-```
 
-Execute:
-
-```bash
 python app.py
 ```
 
-## 📚 Conceitos praticados
+Depois, acesse o endereço exibido pelo Flask no terminal.
 
+## 📚 O que estou praticando
+
+* Python
 * Funções e módulos
 * Dicionários
-* Condicionais e loops
 * Tratamento de exceções
 * Requisições HTTP
-* APIs REST
+* API REST
 * JSON
 * Flask
-* Formulários HTML
+* HTML e CSS
 * Git e GitHub
 
-## 🚀 Próximos passos
-
-* Adicionar mais moedas
-* Melhorar o visual da interface
-* Criar histórico de conversões
-* Aplicar POO
-* Criar testes
-* Evoluir o projeto para uma aplicação de portfólio
-
-
-**Júlio César**
-
-Estudante de Análise e Desenvolvimento de Sistemas, interessado em desenvolvimento Backend, Python e APIs REST.
