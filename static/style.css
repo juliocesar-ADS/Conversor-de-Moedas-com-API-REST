@@ -73,3 +73,87 @@ button {
   background-color: #ffc6c6;
   color: #8b0000;
 }
+
+.historico {
+  margin-top: 20px;
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  width: 300px;
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(49, 49, 49, 0.15);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+.historico.aberto {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.historico h2 {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.historico li {
+  margin-bottom: 12px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f8f8f8;
+  font-size: 14px;
+  line-height: 1.5;
+  box-shadow: 0 2px 6px rgba(37, 37, 37, 0.08);
+}
+
+.historico ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.botao-historico {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: auto;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 2px solid #3f3f3f;
+}
+
+.cabecalho-historico {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.cabecalho-historico h2 {
+  margin: 0;}
+
+  .fechar-historico {
+  width: auto;
+  padding: 4px 8px;
+  border: none;
+  background-color: transparent;
+  color: #222;
+  font-size: 24px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.fechar-historico:hover {
+  background-color: #eee;
+}

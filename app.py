@@ -1,6 +1,9 @@
 from flask import Flask, render_template, request
 from api import obter_cotacao
 
+#lista para armazenar o histórico de conversões
+historico = []
+
 #para conseguir os simbolos das moedas eu pesquisei os simbolos na internet
 moedas = {
     "USD": "US$",
@@ -18,6 +21,7 @@ def inicio():
     simbolo = None
     erro = None
     simbolo_de = None
+    valor = None
 
     if request.method == "POST":
 
@@ -47,12 +51,26 @@ def inicio():
                     else:
 
                         resultado = valor * cotacao
+                    
+            # Adicionar a conversão ao histórico
+            if resultado is not None and cotacao is not None:
+                historico.append({
+                    "valor": valor,
+                    "de": de,
+                    "simbolo_de": simbolo_de,
+                    "para": para,
+                    "simbolo": simbolo,
+                    "resultado": resultado,
+                    "cotacao": cotacao
+                })
+               
 
         except ValueError:
             erro = "Digite um valor válido."
 
 
-    return render_template("index.html", cotacao=cotacao, resultado=resultado, simbolo=simbolo, erro=erro, simbolo_de=simbolo_de)
+
+    return render_template("index.html", cotacao=cotacao, resultado=resultado, simbolo=simbolo, erro=erro, simbolo_de=simbolo_de, valor=valor, historico=historico)
 
 if __name__ == "__main__":
     app.run(debug=True)

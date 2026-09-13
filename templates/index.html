@@ -9,6 +9,7 @@
       href="{{ url_for('static', filename='style.css') }}"
     />
   </head>
+  
   <body>
     <div class="container">
       <div class="titulo">
@@ -49,7 +50,7 @@
           {% if resultado is not none %}
           <p>Cotação: {{ simbolo_de }} 1  = {{ simbolo }} {{ "%.2f"|format(cotacao) }}</p>
 
-          <p>Resultado: {{ simbolo }} {{ "%.2f"|format(resultado) }}</p>
+          <p>{{ simbolo_de }} {{ "%.2f"|format(valor) }} > {{ simbolo }} {{ "%.2f"|format(resultado) }}</p>
           {% endif %}
         </div>
 
@@ -58,7 +59,53 @@
             <p>{{ erro }}</p>
           </div>
         {% endif %}
+
       </form>
+
+      <button class="botao-historico" id="botaoHistorico">
+        Histórico
+      </button>
+
+      <div class="historico">
+
+        <div class="cabecalho-historico">
+          <h2>Histórico de Conversões</h2>
+
+          <button type="button" class="fechar-historico" id="fecharHistorico">
+              x
+          </button>
+        </div>
+        
+        <ul>
+          {% for item in historico %}
+            <li>
+              {{ item.simbolo_de }} {{ "%.2f"|format(item.valor)}} >
+              {{ item.simbolo }} {{ "%.2f"|format(item.resultado)}}
+              (Cotação: {{ "%.2f"|format(item.cotacao)}})
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
     </div>
+
+    <script>
+      const botaoHistorico = document.getElementById("botaoHistorico");
+      const historico = document.querySelector(".historico");
+      const fecharHistorico = document.getElementById("fecharHistorico");
+      document.addEventListener("click", function(event) {
+        if (!historico.contains(event.target) && event.target !== botaoHistorico) {
+          historico.classList.remove("aberto");
+        }
+      });
+
+      fecharHistorico.addEventListener("click", function() {
+        historico.classList.remove("aberto");
+      });
+
+      botaoHistorico.addEventListener("click", function() {
+        historico.classList.toggle("aberto");
+      });
+    </script>
+  
   </body>
 </html>
