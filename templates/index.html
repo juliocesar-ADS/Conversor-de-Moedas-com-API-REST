@@ -76,6 +76,16 @@
           </button>
         </div>
         
+        <form action="/" method="POST" class="form-limpar">
+
+          <input type="hidden" name="acao" value="limpar_historico">
+
+          <button type="submit" class="limpar-historico">
+            Limpar Histórico
+          </button>
+          
+        </form>
+
         <ul>
           {% for item in historico %}
             <li>

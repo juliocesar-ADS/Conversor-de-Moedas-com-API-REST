@@ -75,6 +75,7 @@ Cada conversão armazena:
 * Cotação utilizada
 * Símbolo da moeda de origem
 * Símbolo da moeda de destino
+* Limpeza do histórico através de botâo
 
 Os dados são armazenados em uma lista de dicionários e enviados pelo Flask para a interface utilizando **Jinja2**.
 

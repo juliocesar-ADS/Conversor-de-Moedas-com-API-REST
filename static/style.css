@@ -157,3 +157,20 @@ button {
 .fechar-historico:hover {
   background-color: #eee;
 }
+
+.form-limpar {
+  margin-bottom: 15px;
+}
+
+.limpar-historico {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  background-color: #555;
+  color: white;
+  cursor: pointer;
+}
+
+.limpar-historico:hover {
+  background-color: #333;}

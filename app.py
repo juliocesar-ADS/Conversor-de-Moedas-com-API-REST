@@ -25,6 +25,21 @@ def inicio():
 
     if request.method == "POST":
 
+        acao = request.form.get("acao")
+
+        if acao == "limpar_historico":
+            historico.clear()
+            return render_template(
+                "index.html",
+                cotacao=None,
+                resultado=None,
+                simbolo=None,
+                erro=None,
+                simbolo_de=None,
+                valor=None,
+                historico=historico
+                )
+
         try:
             valor = float(request.form["valor"])
 
