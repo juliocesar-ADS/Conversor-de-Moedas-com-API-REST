@@ -35,13 +35,25 @@ O projeto foi desenvolvido com foco no aprendizado de **Python, consumo de APIs,
 * Animações utilizando CSS
 * Exibição dinâmica dos resultados utilizando Jinja2
 
+
 ## 🌐 API
 
-O projeto utiliza a **AwesomeAPI** para consultar as cotações das moedas.
 
-A aplicação realiza uma requisição HTTP para a API utilizando a biblioteca `Requests`.
+O projeto utiliza a Frankfurter API para obter as cotações das moedas.
 
-A resposta recebida em formato JSON é convertida para estruturas que podem ser utilizadas pelo Python, permitindo acessar a cotação necessária para realizar a conversão.
+A aplicação realiza uma requisição HTTP para a API utilizando a biblioteca Requests. A resposta é recebida no formato JSON e convertida para um dicionário Python.
+
+A cotação é obtida através do campo rate retornado pela API.
+
+Exemplo de consulta:
+
+BRL → USD
+
+A aplicação monta dinamicamente o endpoint de acordo com as moedas escolhidas pelo usuário.
+
+O projeto possui tratamento para erros de requisição, dados inválidos e ausência de informações esperadas na resposta da API.
+
+antigamente usava o AwesomeAPI, mas essa api tem limite de requisição.
 
 ## 📂 Estrutura do projeto
 
@@ -109,6 +121,9 @@ Durante o desenvolvimento do projeto foram praticados:
 * JavaScript
 * Manipulação do DOM
 * Git e GitHub
+* Integração com APIs externas
+* Consumo de dados JSON
+* Tratamento de respostas HTTP
 
 ## 📈 Evolução do projeto
 

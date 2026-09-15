@@ -5,7 +5,10 @@ import requests
 def obter_cotacao(moeda):
         
     try:
-        url = f"https://economia.awesomeapi.com.br/json/last/{moeda}"
+
+        de, para = moeda.lower().split("-")
+
+        url = f"https://api.frankfurter.dev/v2/rate/{de}/{para}"
 
         resposta = requests.get(url, timeout=5)
 
@@ -13,9 +16,7 @@ def obter_cotacao(moeda):
 
         dados = resposta.json()
 
-        moeda_api = moeda.replace("-", "")
-
-        return float(dados[moeda_api]["bid"])
+        return float(dados["rate"])
     
     except requests.exceptions.RequestException as erro:
         print(f"Teve um erro em: {erro}")
