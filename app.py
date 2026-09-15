@@ -38,7 +38,7 @@ def inicio():
                 simbolo_de=None,
                 valor=None,
                 historico=historico
-                )
+            )
 
         try:
             valor = float(request.form["valor"])

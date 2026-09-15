@@ -24,6 +24,8 @@
           id="valor"
           name="valor"
           placeholder="Digite o valor"
+          min="0"
+          step="0.01"
         />
 
         <label for="de">De</label>
@@ -83,15 +85,27 @@
           <button type="submit" class="limpar-historico">
             Limpar Histórico
           </button>
-          
+
         </form>
 
         <ul>
           {% for item in historico %}
             <li>
-              {{ item.simbolo_de }} {{ "%.2f"|format(item.valor)}} >
-              {{ item.simbolo }} {{ "%.2f"|format(item.resultado)}}
-              (Cotação: {{ "%.2f"|format(item.cotacao)}})
+              <div class="historico-conversao">
+                <strong>
+                  {{ item.simbolo_de }} {{ "%.2f"|format(item.valor) }}
+                  >
+                  {{ item.simbolo }} {{ "%.2f"|format(item.resultado) }}
+                </strong>
+
+                <span>
+                  {{ item.de }} > {{ item.para}}
+                </span>
+
+                <small>
+                  Cotação: {{ "%.4f"|format(item.cotacao)}}
+                </small>
+              </div>
             </li>
           {% endfor %}
         </ul>
