@@ -6,7 +6,9 @@ O projeto foi desenvolvido com foco no aprendizado de **Python, consumo de APIs,
 
 ## 🌐 Aplicação
 
-🔗 **Aplicação online:** *em breve*
+O projeto está hospedado e pode ser acessado gratuitamente através do Render:
+
+🔗 **Aplicação online:** *https://conversor-de-moedas-com-api-rest.onrender.com/*
 
 ## 🛠️ Tecnologias
 
